@@ -248,6 +248,62 @@
                 >Website</span
               >
             </a>
+
+            <!-- G.dev -->
+            <a
+              href="https://g.dev/adisantikajaya"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="showTooltip(event)"
+              class="social-card rounded-xl p-6 flex flex-col items-center gap-3 group"
+            >
+              <span class="tooltip">Success connect</span>
+              <svg
+                class="w-8 h-8 text-fg/70 group-hover:text-accent transition-colors"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                />
+              </svg>
+              <span
+                class="text-sm font-semibold text-fg group-hover:text-accent transition-colors"
+                >Google Dev</span
+              >
+            </a>
+
+            <!-- Google Skilss -->
+            <a
+              href="https://www.skills.google/public_profiles/f0353bb8-b7c2-4099-8899-9543001945bf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="showTooltip(event)"
+              class="social-card rounded-xl p-6 flex flex-col items-center gap-3 group"
+            >
+              <span class="tooltip">Success connect</span>
+              <svg
+                class="w-8 h-8 text-fg/70 group-hover:text-accent transition-colors"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                />
+              </svg>
+              <span
+                class="text-sm font-semibold text-fg group-hover:text-accent transition-colors"
+                >Google Skills</span
+              >
+            </a>
           </div>
         </div>
       </section>
@@ -327,13 +383,16 @@
       <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
       <script>
         const lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
         requestAnimationFrame(raf);
 
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-          a.addEventListener('click', e => {
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", (e) => {
             e.preventDefault();
-            const target = document.querySelector(a.getAttribute('href'));
+            const target = document.querySelector(a.getAttribute("href"));
             if (target) lenis.scrollTo(target, { offset: -64 });
           });
         });
